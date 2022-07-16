@@ -1,10 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 18ae1101454cdd940a9ac114b5bc4024
+=======
+guid: 94c5556d0b9ebc941b521a580348cbfe
+>>>>>>> 100ea87488b743110cd8d88c063849082d94cd11
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: -887982601649841707
+<<<<<<< HEAD
     second: T Pose
   - first:
       74: -2463781497245029270
@@ -30,6 +35,13 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Red  robot metal
     second: {fileID: 2100000, guid: be625ed563fd80e4cb86ece8a0ae1ebe, type: 2}
+=======
+    second: metarig|metarigAction
+  - first:
+      74: -2463781497245029270
+    second: metarig|metarigAction.001
+  externalObjects: {}
+>>>>>>> 100ea87488b743110cd8d88c063849082d94cd11
   materials:
     materialImportMode: 2
     materialName: 0
@@ -57,6 +69,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
+<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: T Pose
@@ -116,6 +129,9 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+=======
+    clipAnimations: []
+>>>>>>> 100ea87488b743110cd8d88c063849082d94cd11
     isReadable: 0
   meshes:
     lODScreenPercentages: []
