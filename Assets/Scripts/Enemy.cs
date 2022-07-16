@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     private int current;
 
 
-    void followPath()
+   public void followPath()
     {
         if (transform.position != target[current].position)
         {
@@ -26,20 +26,29 @@ public class Enemy : MonoBehaviour
         else current = (current + 1) % target.Length;
 
     }
-    void die()
+    public void die()
+    {
+        Debug.Log("Bloody Hell!");
+        Destroy(gameObject);
+    }
+
+    public void takeDamage(float damage)  {
+        this.Health-=damage;
+    }
+
+    public void celebrate()
     {
 
     }
-    void celebrate()
-    {
 
-    }
-
-    void Update()
+    public void Update()
     {
         if (Health > 0)
         {
             followPath();
+        } else 
+        {
+            die();
         }
     }
 }
