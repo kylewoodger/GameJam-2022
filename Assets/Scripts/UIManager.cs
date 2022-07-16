@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -8,42 +9,42 @@ public class UIManager : MonoBehaviour
     public GamePhase gamePhase;
     public Dice currentlySelectedDice;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
     }
 
-    void NextPhase() {
+    public void NextPhase() {
 
     }
 
-    void StartGame() {
-
+    public void StartGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    void QuitGame() {
+    public void QuitGame() {
         Application.Quit();
     }
 
-    void SelectBonus() {
+    public void SelectBonus() {
 
     }
 
-    void SelectDice() {
+    public void SelectDice() {
 
     }
 
-    void Throw() {
+    public void Throw() {
 
     }
 
-    void StartLevel() {
+    public void StartLevel() {
 
     }
 
