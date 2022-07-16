@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Base
-    second: {fileID: 2100000, guid: 50118d4ad5da0ca44be8a61263010842, type: 2}
+    second: {fileID: 2100000, guid: 6d6388e522c0b754aacabbaa857bc02b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gun Metal
-    second: {fileID: 2100000, guid: df2a41e3a94a78b4a9ab7cbd20f74b14, type: 2}
+    second: {fileID: 2100000, guid: f40dfa3824b112b4bb1d50e2707df3f4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 94acbe6561292174aaf21846f1ead733, type: 2}
+    second: {fileID: 8111183451353750847, guid: 94c5556d0b9ebc941b521a580348cbfe, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
