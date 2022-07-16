@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     public bool canThrowDice;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         canThrowDice = false;
         villageHealth = 100;
@@ -20,40 +20,40 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
     }
 
-    void NextLevel() {
+    public void NextLevel() {
         currentLevel++;
     }
 
-    void StartGame() {
+    public void StartGame() {
 
     }
 
-    void ChangePhase(GamePhase g) {
+    public void ChangePhase(GamePhase g) {
         gamePhase = g;
     }
 
-    void EndGame() {
+    public void EndGame() {
 
     }
 
-    void VillageTakeDamage (int damage) {
+    public void VillageTakeDamage (int damage) {
         villageHealth -= damage;
     }
 
-    void BonusGenerator() {
+    public void BonusGenerator() {
 
     }
 
-    void ResetDiceCount() {
+    public void ResetDiceCount() {
 
     }
 
-    void CanThrowMoreDice() {
+    public void CanThrowMoreDice() {
 
     }
 }
