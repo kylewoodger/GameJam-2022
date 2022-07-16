@@ -422,7 +422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   colour: 0
-  Speed: 2
+  Speed: 5
+  damage: 1
+  impactEffect: {fileID: 8193226282519056587, guid: b08c7832aca909f458a877cc9785d836, type: 3}
   target:
   - {fileID: 0}
   - {fileID: 0}
@@ -444,6 +446,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   damping: 6
+  village: {fileID: 0}
 --- !u!1 &3026514013482235798
 GameObject:
   m_ObjectHideFlags: 0
