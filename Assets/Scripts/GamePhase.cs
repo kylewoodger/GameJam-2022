@@ -6,6 +6,7 @@ public enum GamePhase
 {
     MENU,
     PICK_DICE,
+    PICK_DICE_LOCATION,
     DICE_IN_AIR,
     ROUND_IN_PROGRESS,
     PICK_BONUS,
