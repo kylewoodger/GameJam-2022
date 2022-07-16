@@ -8,9 +8,9 @@ public class UIManager : MonoBehaviour
 {
 
     //UI Elements
-    public GameObject mainMenu;
-    public GameObject diceMenu;
-    public GameObject standardDiceImage;
+    public Text standardDiceNumberLabel;
+    public Text precisionDiceNumberLabel;
+    public Text choiceDiceNumberLabel;
 
     //Game elements
     public GamePhase gamePhase;
@@ -22,8 +22,6 @@ public class UIManager : MonoBehaviour
     public void Start()
     {
         inventory = GetComponent<Inventory>();
-        mainMenu.SetActive(true);
-        diceMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,19 +34,10 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void OnDiceMenuShow() {
-        Debug.Log(inventory.noOfStandardDice);
-        Transform standardDice = diceMenu.transform.Find("StandardDiceLabel");
-        GameObject standardDiceLabel = standardDice.transform.Find("StandardDiceNumber").gameObject;
-        Debug.Log(standardDiceLabel);
-        TextMeshPro text = standardDiceLabel.GetComponent<TextMeshPro>();
-        text.SetText("Hello");
-    }
-
     public void StartGame() {
-        mainMenu.SetActive(false);
-        diceMenu.SetActive(true);
-        OnDiceMenuShow();
+        //change scene
+        SceneManager.LoadScene("level1");
+        StartLevel(1);
     }
 
     public void QuitGame() {
@@ -68,7 +57,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void StartLevel() {
-
+        standardDiceNumberLabel.GetComponent<TextMeshPro>().SetText("3");
     }
 
 }
