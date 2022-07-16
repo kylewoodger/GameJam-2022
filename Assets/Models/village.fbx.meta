@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 87b1aec69ca38c64f94c9d678ad37beb
+guid: a941866bedc4bfd459766eb73a9880af
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Base
-    second: {fileID: 2100000, guid: 6d6388e522c0b754aacabbaa857bc02b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Gun Metal
-    second: {fileID: 2100000, guid: f40dfa3824b112b4bb1d50e2707df3f4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 8111183451353750847, guid: 94c5556d0b9ebc941b521a580348cbfe, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
