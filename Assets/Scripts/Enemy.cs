@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float Health;
+    public float Health = 10.0f;
     public Colour colour;
-    public float Speed;
+    public float Speed = 2.0f;
 
     public Transform[] target;
     public float damping = 6.0f;
