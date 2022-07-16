@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -194,7 +194,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6b1129fc12b8e0c42aabdc918231e56f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b1129fc12b8e0c42aabdc918231e56f, type: 3}
       propertyPath: m_LocalScale.x
@@ -729,15 +729,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fee6417c775d9a4c9e93770c762d0e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.892
+      value: -11.478628
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fee6417c775d9a4c9e93770c762d0e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.355
+      value: 0.16881546
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fee6417c775d9a4c9e93770c762d0e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.187
+      value: -14.610119
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8fee6417c775d9a4c9e93770c762d0e8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -773,6 +773,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fee6417c775d9a4c9e93770c762d0e8, type: 3}
+--- !u!1 &861408768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 861408769}
+  - component: {fileID: 125333379}
+  m_Layer: 0
+  m_Name: 'Recovery GameObject for Rigidbody (ID in file: 125333379)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &861408769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861408768}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978523233
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +969,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061457744
 GameObject:
