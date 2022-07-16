@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: 87b1aec69ca38c64f94c9d678ad37beb
+guid: aa01e6f197a4b764786ebe548f2b6a68
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Board Wood
+    second: {fileID: 2100000, guid: dd8f823e0ff75944e88f142f98cffd0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mountain
+    second: {fileID: 2100000, guid: aa6b0c09ec1f5414f9e95e4b2cc1fd47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Path
+    second: {fileID: 2100000, guid: cc11967942563a44a81f6bda684cc719, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grass
+    second: {fileID: 2100000, guid: e5cc57514f956fe46964cef665083495, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
