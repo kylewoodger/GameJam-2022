@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Floor
   - Enemy
+  - EnemyPath
+  - Village
+  - GameOverCamera
   layers:
   - Default
   - TransparentFX

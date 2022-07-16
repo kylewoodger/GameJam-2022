@@ -8,9 +8,12 @@ public class GameController : MonoBehaviour
 
     public static GameController instance;
 
+    public GameObject mainCamera;
+    public GameObject gameOverCamera;
+
     public int currentLevel;
     public GamePhase gamePhase;
-    public int villageHealth;
+    public bool gameOver = false;
     public int aliveEnemies;
     public int noOfStandardDice; 
     public int noOfPrecisionDice;
@@ -32,8 +35,12 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        Debug.Log(mainCamera);
+        gameOverCamera = GameObject.FindGameObjectWithTag("GameOverCamera");
+        mainCamera.SetActive(true);
+        gameOverCamera.SetActive(false);
         canThrowDice = false;
-        villageHealth = 100;
         noOfStandardDice = 3;
         noOfPrecisionDice = 1;
         noOfChoiceDice = 1;
@@ -67,9 +74,15 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void VillageTakeDamage (int damage) {
-        villageHealth -= damage;
+    public void GameOver()
+    {
+        gameOver = true;
+        gameOverCamera.SetActive(true);
+        mainCamera.SetActive(false);
+        
+
     }
+
 
     public void BonusGenerator() {
 
