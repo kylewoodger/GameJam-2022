@@ -2,26 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class UIManager : MonoBehaviour
 {
 
     //UI Elements
-    public Text standardDiceNumberLabel;
-    public Text precisionDiceNumberLabel;
-    public Text choiceDiceNumberLabel;
+    public GameObject standardDiceNumberLabel;
+    public GameObject precisionDiceNumberLabel;
+    public GameObject choiceDiceNumberLabel;
 
     //Game elements
     public GamePhase gamePhase;
     public Dice currentlySelectedDice;
 
-    private Inventory inventory;
-
     // Start is called before the first frame update
     public void Start()
     {
-        inventory = GetComponent<Inventory>();
+        StartLevel(1);
     }
 
     // Update is called once per frame
@@ -32,16 +31,6 @@ public class UIManager : MonoBehaviour
 
     public void NextPhase() {
 
-    }
-
-    public void StartGame() {
-        //change scene
-        SceneManager.LoadScene("level1");
-        StartLevel(1);
-    }
-
-    public void QuitGame() {
-        Application.Quit();
     }
 
     public void SelectBonus() {
@@ -56,8 +45,18 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void StartLevel() {
-        standardDiceNumberLabel.GetComponent<TextMeshPro>().SetText("3");
+    public void DiceHover(Outline outline) {
+        outline.effectDistance = new Vector2(2, -2);
+    }
+
+    public void DiceHoverExit(Outline outline) {
+        outline.effectDistance = new Vector2(0, 0);
+    }
+
+    public void StartLevel(int levelNo) {
+        standardDiceNumberLabel.GetComponent<TMP_Text>().text = GetComponent<GameController>().noOfStandardDice.ToString();
+        precisionDiceNumberLabel.GetComponent<TMP_Text>().text = GetComponent<GameController>().noOfPrecisionDice.ToString();
+        choiceDiceNumberLabel.GetComponent<TMP_Text>().text = GetComponent<GameController>().noOfChoiceDice.ToString();
     }
 
 }
