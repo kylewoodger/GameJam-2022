@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     public int noOfPrecisionDice;
     public int noOfChoiceDice;
     public bool canThrowDice;
-
+    public UIManager uiManager;
 
     public void Awake()
     {
