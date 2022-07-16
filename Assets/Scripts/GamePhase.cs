@@ -8,6 +8,8 @@ public enum GamePhase
     PICK_DICE,
     PICK_DICE_LOCATION,
     DICE_IN_AIR,
+    DICE_ROLLED,
+    DICE_IN_MOTION,
     DICE_LANDED,
     ROUND_IN_PROGRESS,
     PICK_BONUS,
