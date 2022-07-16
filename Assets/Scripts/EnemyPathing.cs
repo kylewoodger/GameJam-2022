@@ -2,44 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyPathing : MonoBehaviour
 {
-    public float Health;
-    public Colour colour;
-    public float Speed;
-
     public Transform[] target;
+    public float speed;
     public float damping = 6.0f;
 
     private int current;
 
-
-    void followPath()
+    
+    void Update()
     {
         if (transform.position != target[current].position)
         {
             var rotation = Quaternion.LookRotation(target[current].position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
-            Vector3 pos = Vector3.MoveTowards(transform.position, target[current].position, Speed * Time.deltaTime);
+            Vector3 pos = Vector3.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
             GetComponent<Rigidbody>().MovePosition(pos);
         }
         else current = (current + 1) % target.Length;
-
-    }
-    void die()
-    {
-
-    }
-    void celebrate()
-    {
-
-    }
-
-    void Update()
-    {
-        if (Health > 0)
-        {
-            followPath();
-        }
     }
 }
