@@ -14,6 +14,19 @@ public class Enemy : MonoBehaviour
     private int current;
 
 
+    public void findPath()
+    {
+        int i = 0;
+        GameObject[] points = GameObject.FindGameObjectsWithTag("EnemyPath");
+        int len = points.Length;
+        foreach (GameObject point in points)
+        {
+            GameObject pos = (GameObject.Find("EnemyPathPosition (" + i + ")"));
+            target[i]= (pos.transform);
+            i++;
+            Debug.Log(i);
+        }
+    }
    public void followPath()
     {
         if (transform.position != target[current].position)
@@ -39,6 +52,11 @@ public class Enemy : MonoBehaviour
     public void celebrate()
     {
 
+    }
+
+    public void Start()
+    {
+        findPath();
     }
 
     public void Update()
