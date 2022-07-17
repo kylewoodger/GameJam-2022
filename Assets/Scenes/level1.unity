@@ -2051,7 +2051,7 @@ MonoBehaviour:
   mainCamera: {fileID: 1187951172}
   gameOverCamera: {fileID: 1756776780}
   currentLevel: 0
-  gamePhase: 0
+  gamePhase: 1
   gameOver: 0
   aliveEnemies: 0
   noOfStandardDice: 3

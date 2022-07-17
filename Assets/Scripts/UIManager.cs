@@ -68,17 +68,15 @@ public class UIManager : MonoBehaviour
         if (gameController.gamePhase == GamePhase.DICE_IN_MOTION && curDiceObj.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0)) {
             gameController.gamePhase = GamePhase.DICE_LANDED;
             BoxCollider[] diceSides = curDiceObj.GetComponentsInChildren<BoxCollider>();
-            Debug.Log(curDiceObj);
-            Debug.Log(diceSides.Length);
             float curHighest = 100;
             BoxCollider highest = new BoxCollider();
             foreach (BoxCollider dice in diceSides) {
-                if (Vector3.Distance(curDiceObj.transform.position + new Vector3(0, 3, 0), dice.transform.position) < curHighest) {
+                if (dice.name != "Dice(Clone)" && Vector3.Distance(curDiceObj.transform.position + new Vector3(0, 3, 0), dice.transform.position) < curHighest) {
                     curHighest = Vector3.Distance(curDiceObj.transform.position + new Vector3(0, 3, 0), dice.transform.position);
                     highest = dice;
                 }
             }
-            Debug.Log(highest.name);
+            //highest.name is the side of the dice that is facing upwards.
         }
     }
 
