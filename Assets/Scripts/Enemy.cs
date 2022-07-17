@@ -47,8 +47,9 @@ public class Enemy : MonoBehaviour
             current = (current + 1);
             if (current == target.Count)
             {
-                village.GetComponent<Village>().villageHealth -= damage;
                 impactSound.Play();
+                village.GetComponent<Village>().villageHealth -= damage;
+                
                 GameObject effectIns  = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
                 Destroy(effectIns, 2f);
                 Destroy(gameObject);

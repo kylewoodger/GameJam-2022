@@ -14,6 +14,7 @@ public class Towers : MonoBehaviour
     public float sightRange;
     public Transform target;
     public BulletModifiers bulletModifiers;
+    public GameObject gunSmokeEffect;
     public TowerType towerType;
     public string enemyTag = "Enemy";
     
@@ -21,6 +22,8 @@ public class Towers : MonoBehaviour
     {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.gameObject.transform.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        GameObject effectIns  = (GameObject)Instantiate(gunSmokeEffect, firePoint.position, firePoint.rotation);
+        Destroy(effectIns, 2f);
 
         if (bullet != null)
         {

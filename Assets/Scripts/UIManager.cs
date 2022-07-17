@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     public GameObject firePrefab;
     public GameObject electricPrefab;
     public GameObject laserPrefab;
+    public AudioSource diceRoll; 
 
     //Control variables
     private bool moveDice;
@@ -66,6 +67,7 @@ public class UIManager : MonoBehaviour
                 diceRb.useGravity = true;
                 diceRb.AddTorque(Random.Range(-500.0f, 500.0f), Random.Range(-500.0f, 500.0f), Random.Range(-500.0f, 500.0f), ForceMode.Force);
                 diceRb.AddForce(new Vector3(Random.Range(-500.0f, 500.0f), 0, Random.Range(-500.0f, 500.0f)), ForceMode.Force);
+                diceRoll.Play();
                 gameController.gamePhase = GamePhase.DICE_ROLLED;
             }
         }

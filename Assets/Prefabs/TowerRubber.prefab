@@ -85,6 +85,7 @@ MonoBehaviour:
   sightRange: 5
   target: {fileID: 0}
   bulletModifiers: {fileID: 0}
+  gunSmokeEffect: {fileID: 7745441480984764705, guid: a337d65cb00e9804292b8ce62cb9aa35, type: 3}
   towerType: 1
   enemyTag: Enemy
 --- !u!1001 &8289523243782052022
