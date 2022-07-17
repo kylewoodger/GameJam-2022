@@ -17,9 +17,14 @@ public class UIManager : MonoBehaviour
     public GameObject dicePrefab;
     public GameObject curTubeObj;
     public GameObject tubePrefab;
+    public GameObject preciseTubePrefab;
     public GameObject startRoundButton;
     public GameObject youWonRound;
     public GameObject nextRoundButton;
+    public Material mouseCircleMat;
+    public GameObject choiceDice;
+    public GameObject gameOverUi;
+    public GameObject dicePanel;
 
     private string curDiceType;
 
@@ -67,7 +72,13 @@ public class UIManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100))
             {
                 gameController.ChangePhase(GamePhase.DICE_IN_AIR);
-                curTubeObj = Instantiate(tubePrefab, hit.point, Quaternion.identity);
+                GameObject tubeToInstantiate = new GameObject();
+                if (curDiceType == "PrecisionDice") {
+                    tubeToInstantiate = preciseTubePrefab;
+                } else {
+                    tubeToInstantiate = tubePrefab;
+                }
+                curTubeObj = Instantiate(tubeToInstantiate, hit.point, Quaternion.identity);
                 curTubeObj.GetComponent<MeshCollider>().enabled = false;
                 hitPoint = hit.point + new Vector3(0, 10, 0);
                 moveDice = true;
@@ -155,20 +166,24 @@ public class UIManager : MonoBehaviour
     }
 
     public void OnDiceClick(GameObject dice) {
+        Debug.Log(dice.name);
         curDiceType = dice.name;
         bool diceRemaining = true;
         switch (curDiceType) {
                 case "StandardDice":
+                    mouseCircleMat.SetFloat("_Radius", 8);
                     if (gameController.noOfStandardDice == 0) {
                         diceRemaining = false;
                     }
                     break;
                 case "PrecisionDice":
+                    mouseCircleMat.SetFloat("_Radius", 1);
                     if (gameController.noOfPrecisionDice == 0) {
                         diceRemaining = false;
                     }
                     break;
                 case "ChoiceDice":
+                    mouseCircleMat.SetFloat("_Radius", 8);
                     if (gameController.noOfChoiceDice == 0) {
                         diceRemaining = false;
                     }
