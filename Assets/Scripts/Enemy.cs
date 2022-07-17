@@ -20,7 +20,6 @@ public class Enemy : MonoBehaviour
 
     public void findPath()
     {
-        // Array.Clear(target, 0, target.Count);
         int i = 0;
         village = GameObject.FindGameObjectWithTag("Village");
         GameObject[] points = GameObject.FindGameObjectsWithTag("EnemyPath");
@@ -30,7 +29,6 @@ public class Enemy : MonoBehaviour
             GameObject pos = (GameObject.Find("EnemyPathPosition (" + i + ")"));
             target.Add(pos.transform);
             i++;
-            // Debug.Log(target.Length);
             
         }
     }
@@ -46,6 +44,7 @@ public class Enemy : MonoBehaviour
         }
         else {
             current = (current + 1);
+            Debug.Log(current);
             if (current == target.Count)
             {
                 village.GetComponent<Village>().villageHealth -= damage;
