@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 3
+  damage: 2
   bulletPrefab: {fileID: 7999224134058848164, guid: d4b6160ad1e2fbb40b8d2bb7326b3ad5, type: 3}
   firePoint: {fileID: 244085170322710830}
   turnSpeed: 20

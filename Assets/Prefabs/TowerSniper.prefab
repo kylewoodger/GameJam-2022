@@ -77,11 +77,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09aa9888e208ca443ba9a787edb1f87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 3
+  fireRate: 0.5
+  damage: 5
   bulletPrefab: {fileID: 8725355102814305195, guid: e51654e74ccf04f4996917a71e0e819e, type: 3}
   firePoint: {fileID: 244085170322710830}
   turnSpeed: 5
-  sightRange: 5
+  sightRange: 25
   target: {fileID: 0}
   bulletModifiers: {fileID: 0}
   towerType: 2

@@ -6,7 +6,16 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
     private GameObject enemyHit;
-    public float damage = 1;
+    // public enum BulletType
+    // {
+    //     SNIPER,
+    //     RUBBER,
+    //     LIGHTNING,
+    //     LASER,
+    //     FIRE,
+    //     BALLISTIC
+    // } 
+    public float damage;
     public float speed = 10f;
     public GameObject impactEffect;
     

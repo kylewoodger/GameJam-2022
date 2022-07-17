@@ -6,6 +6,7 @@ public class Towers : MonoBehaviour
 {
     
     public float fireRate;
+    public float damage;
     private float fireCountdown = 0f;
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -23,6 +24,7 @@ public class Towers : MonoBehaviour
 
         if (bullet != null)
         {
+            bullet.damage = damage;
             bullet.Seek(target);
         }
     }

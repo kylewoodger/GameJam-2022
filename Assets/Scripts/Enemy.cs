@@ -44,7 +44,6 @@ public class Enemy : MonoBehaviour
         }
         else {
             current = (current + 1);
-            Debug.Log(current);
             if (current == target.Count)
             {
                 village.GetComponent<Village>().villageHealth -= damage;
