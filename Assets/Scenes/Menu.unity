@@ -452,7 +452,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: By Kyle, sam and ollie
+  m_text: '(subtitle: a good day die (hard))
+
+    By Kyle, sam and ollie'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -515,7 +517,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -253.9834, y: -36.876953, z: -242.55615, w: -60.58789}
+  m_margin: {x: -253.9834, y: -20.895325, z: -242.55615, w: -60.58789}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1643,7 +1645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: COOL GAME
+  m_text: roll or die
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3632,12 +3634,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cool Game is a tower defence game that takes place on the board game in
-    your dreams.
+  m_text: 'Roll or Die is a tower defence game that takes place on the board game
+    in your dreams.
 
 
-    Roll either a standard dice or a precision dice to place a
-    turret. The higher the dice roll, the stronger your turret.
+    Roll either a standard dice or a precision dice to place
+    a turret. The higher the dice roll, the stronger your turret.
 
 
     Each round
