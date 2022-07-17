@@ -9,6 +9,14 @@ TagManager:
   - EnemyPath
   - Village
   - GameOverCamera
+  - StandardDiceLabel
+  - PrecisionDiceLabel
+  - ChoiceDiceLabel
+  - StandardDiceUI
+  - PrecisionDiceUI
+  - ChoiceDiceUI
+  - StartRoundButton
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX

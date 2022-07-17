@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 309625355791271408}
   m_Layer: 0
   m_Name: EnemySpawner
-  m_TagString: Untagged
+  m_TagString: EnemySpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,9 @@ MonoBehaviour:
   noOfEnemies: 10
   spawnInterval: 2
   spawnCountdown: 0
+  gameController: {fileID: 0}
   enemyPrefab: {fileID: 2203972564624594138, guid: 390057c1c63e5de4f97ddc93616093f2, type: 3}
+  enemiesSpawned: 0
 --- !u!1 &6742402217351504053
 GameObject:
   m_ObjectHideFlags: 0

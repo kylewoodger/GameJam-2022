@@ -9,7 +9,7 @@ public class enemySpawner : MonoBehaviour
     public float spawnCountdown;
     public GameObject gameController;
     public GameObject enemyPrefab; 
-    private int enemiesSpawned;
+    public int enemiesSpawned;
     public ArrayList enemyPathPositions = new ArrayList();
     
     
@@ -17,9 +17,6 @@ public class enemySpawner : MonoBehaviour
     void Start()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController");
-
-            
-
     }
 
     // Update is called once per frame
