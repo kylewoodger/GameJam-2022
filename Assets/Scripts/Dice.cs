@@ -4,37 +4,17 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
+    public AudioSource diceImpact;
 
     public DiceType diceType;
 
-    public void Throw()
-    {
-
-    }
-
-    public void OnRollFinish()
-    {
-
-    }
-
-    public void SpawnTurret()
-    {
-
-    }
-
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
+    void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.relativeVelocity.magnitude > 2)
+        {
+            diceImpact.Play();
+         }
     }
+        
 }
