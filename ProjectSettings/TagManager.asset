@@ -9,6 +9,7 @@ TagManager:
   - EnemyPath
   - Village
   - GameOverCamera
+  - Audio
   layers:
   - Default
   - TransparentFX
