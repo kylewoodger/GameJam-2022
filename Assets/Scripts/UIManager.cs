@@ -31,6 +31,7 @@ public class UIManager : MonoBehaviour
     private bool moveDice;
     private Vector3 hitPoint;
 
+    
     // Start is called before the first frame update
     public void Start()
     {

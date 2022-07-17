@@ -62,6 +62,7 @@ public class GameController : MonoBehaviour
         gameOverCamera = GameObject.FindGameObjectWithTag("GameOverCamera");
         mainCamera.SetActive(true);
         gameOverCamera.SetActive(false);
+        // uiManager.StartLevel(currentLevel);
         
     }
 
