@@ -1095,6 +1095,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 309625355791271408, guid: 59958ad697b1d9544b83318a77401d04, type: 3}
+      propertyPath: noOfEnemies
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 309625355791271408, guid: 59958ad697b1d9544b83318a77401d04, type: 3}
+      propertyPath: spawnInterval
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5086660430846660844, guid: 59958ad697b1d9544b83318a77401d04, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1

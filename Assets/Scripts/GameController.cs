@@ -90,7 +90,7 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
         noOfChoiceDice += 1;
         noOfPrecisionDice += 1;
-        noOfStandardDice += 3;
+        noOfStandardDice += 1;
     }
 
     public void StartGame() {
