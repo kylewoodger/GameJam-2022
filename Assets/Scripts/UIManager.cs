@@ -20,6 +20,12 @@ public class UIManager : MonoBehaviour
     //Game elements
     public Dice currentlySelectedDice;
     public GameController gameController;
+    public GameObject ballisticPrefab;
+    public GameObject rubberPrefab;
+    public GameObject sniperPrefab;
+    public GameObject firePrefab;
+    public GameObject electricPrefab;
+    public GameObject laserPrefab;
 
     //Control variables
     private bool moveDice;
@@ -67,6 +73,7 @@ public class UIManager : MonoBehaviour
         }
         if (gameController.gamePhase == GamePhase.DICE_IN_MOTION && curDiceObj.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0)) {
             gameController.gamePhase = GamePhase.DICE_LANDED;
+            Destroy(curTubeObj);
             BoxCollider[] diceSides = curDiceObj.GetComponentsInChildren<BoxCollider>();
             float curHighest = 100;
             BoxCollider highest = new BoxCollider();
@@ -76,24 +83,38 @@ public class UIManager : MonoBehaviour
                     highest = dice;
                 }
             }
+            SpawnTower(highest.name);
             //highest.name is the side of the dice that is facing upwards.
         }
     }
 
-    public void NextPhase() {
-
-    }
-
-    public void SelectBonus() {
-
-    }
-
-    public void SelectDice() {
-
-    }
-
-    public void Throw() {
-
+    public void SpawnTower(string tower) {
+        GameObject towerPrefab = new GameObject();
+        switch(tower) {
+            case("Ballistic"):
+                towerPrefab = ballisticPrefab;
+                break;
+            case("Rubber"):
+                towerPrefab = rubberPrefab;
+                break;
+            case("Sniper"):
+                towerPrefab = sniperPrefab;
+                break;
+            case("Fire"):
+                towerPrefab = firePrefab;
+                break;
+            case("Electric"):
+                towerPrefab = electricPrefab;
+                break;
+            case("Laser"):
+                towerPrefab = laserPrefab;
+                break;
+        }
+        GameObject towerObj = Instantiate(
+            towerPrefab, 
+            new Vector3(curDiceObj.transform.position.x, 0, curDiceObj.transform.position.z),
+            Quaternion.identity);
+        Destroy(curDiceObj);
     }
 
     public void DiceHover(Outline outline) {

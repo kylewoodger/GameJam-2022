@@ -2036,6 +2036,12 @@ MonoBehaviour:
   tubePrefab: {fileID: 4797202440666035503, guid: db8e270f4394a804fb56fabf7cf89486, type: 3}
   currentlySelectedDice: {fileID: 0}
   gameController: {fileID: 1666394200}
+  ballisticPrefab: {fileID: 8289523243141473108, guid: e903ac380bb7c854babf0d645a37d21b, type: 3}
+  rubberPrefab: {fileID: 8289523243141473108, guid: fe672fa946bc9314d91a4dfb6d664750, type: 3}
+  sniperPrefab: {fileID: 8289523243141473108, guid: 4fd6f878ff73cc24a92639fb748c040c, type: 3}
+  firePrefab: {fileID: 8289523243141473108, guid: 85a8a33acf6eb8f4b8fac5137bb3839d, type: 3}
+  electricPrefab: {fileID: 8289523243141473108, guid: b558a2c966cdabc459bb608a54e7cb9f, type: 3}
+  laserPrefab: {fileID: 8289523243141473108, guid: 3ec2c824fc4ec354fae247b832235486, type: 3}
 --- !u!114 &1666394200
 MonoBehaviour:
   m_ObjectHideFlags: 0
