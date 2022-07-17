@@ -9,7 +9,7 @@ public class Towers : MonoBehaviour
     private float fireCountdown = 0f;
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float turnSpeed;
+    public float turnSpeed = 10;
     public float sightRange;
     public Transform target;
     public BulletModifiers bulletModifiers;
@@ -18,7 +18,7 @@ public class Towers : MonoBehaviour
     
     void Shoot()
     {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.gameObject.transform.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)

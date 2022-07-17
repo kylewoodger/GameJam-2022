@@ -11,6 +11,7 @@ public class Village : MonoBehaviour
     void Start()
     {
         villageHealth = 5f;
+        gameController = GameObject.FindGameObjectWithTag("GameController");
         
     }
 

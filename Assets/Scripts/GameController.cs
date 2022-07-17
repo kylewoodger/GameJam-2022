@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         gameOverCamera = GameObject.FindGameObjectWithTag("GameOverCamera");
         mainCamera.SetActive(true);
@@ -53,6 +54,15 @@ public class GameController : MonoBehaviour
         {
             NextLevel();
         }
+    }
+
+    public void OnSceneLoaded(Scene currentLevel, LoadSceneMode Single) 
+    {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        gameOverCamera = GameObject.FindGameObjectWithTag("GameOverCamera");
+        mainCamera.SetActive(true);
+        gameOverCamera.SetActive(false);
+        
     }
 
     public void NextLevel() {
