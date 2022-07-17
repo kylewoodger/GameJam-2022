@@ -6,19 +6,15 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
     private GameObject enemyHit;
-    // public enum BulletType
-    // {
-    //     SNIPER,
-    //     RUBBER,
-    //     LIGHTNING,
-    //     LASER,
-    //     FIRE,
-    //     BALLISTIC
-    // } 
+    public AudioSource soundEffect;
     public float damage;
     public float speed = 10f;
     public GameObject impactEffect;
     
+    public void Start()
+    {
+        soundEffect.Play();
+    }
     public void Seek(Transform t)
     {
         target = t;

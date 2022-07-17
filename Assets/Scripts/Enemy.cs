@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float Speed = 2.0f;
     public float damage = 1.0f;
     public GameObject impactEffect;
+    public AudioSource impactSound;
 
     public  ArrayList target = new ArrayList();
     public float damping = 6.0f;
@@ -47,6 +48,7 @@ public class Enemy : MonoBehaviour
             if (current == target.Count)
             {
                 village.GetComponent<Village>().villageHealth -= damage;
+                impactSound.Play();
                 GameObject effectIns  = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
                 Destroy(effectIns, 2f);
                 Destroy(gameObject);
