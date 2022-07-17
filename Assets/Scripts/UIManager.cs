@@ -54,18 +54,31 @@ public class UIManager : MonoBehaviour
             curDiceObj.transform.position = Vector3.Lerp(curDiceObj.transform.position, hitPoint, 3 * Time.deltaTime);
             if (Vector3.Distance(curDiceObj.transform.position, hitPoint) < 0.5) {
                 curTubeObj.GetComponent<MeshCollider>().enabled = true;
-                Debug.Log(curTubeObj.GetComponent<MeshCollider>().enabled);
                 moveDice = false;
                 Rigidbody diceRb = curDiceObj.GetComponent<Rigidbody>();
                 diceRb.useGravity = true;
                 diceRb.AddTorque(Random.Range(-500.0f, 500.0f), Random.Range(-500.0f, 500.0f), Random.Range(-500.0f, 500.0f), ForceMode.Force);
                 diceRb.AddForce(new Vector3(Random.Range(-500.0f, 500.0f), 0, Random.Range(-500.0f, 500.0f)), ForceMode.Force);
+                gameController.gamePhase = GamePhase.DICE_ROLLED;
             }
         }
-        if(gameController.gamePhase == GamePhase.DICE_IN_AIR) {
-            if(curDiceObj.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0)) {
-                gameController.gamePhase = GamePhase.DICE_LANDED;
+        if(gameController.gamePhase == GamePhase.DICE_ROLLED && curDiceObj.GetComponent<Rigidbody>().velocity != new Vector3(0, 0, 0)) {
+            gameController.gamePhase = GamePhase.DICE_IN_MOTION;
+        }
+        if (gameController.gamePhase == GamePhase.DICE_IN_MOTION && curDiceObj.GetComponent<Rigidbody>().velocity == new Vector3(0, 0, 0)) {
+            gameController.gamePhase = GamePhase.DICE_LANDED;
+            BoxCollider[] diceSides = curDiceObj.GetComponentsInChildren<BoxCollider>();
+            Debug.Log(curDiceObj);
+            Debug.Log(diceSides.Length);
+            float curHighest = 100;
+            BoxCollider highest = new BoxCollider();
+            foreach (BoxCollider dice in diceSides) {
+                if (Vector3.Distance(curDiceObj.transform.position + new Vector3(0, 3, 0), dice.transform.position) < curHighest) {
+                    curHighest = Vector3.Distance(curDiceObj.transform.position + new Vector3(0, 3, 0), dice.transform.position);
+                    highest = dice;
+                }
             }
+            Debug.Log(highest.name);
         }
     }
 

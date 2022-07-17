@@ -2031,7 +2031,7 @@ MonoBehaviour:
   precisionDiceNumberLabel: {fileID: 1109598656}
   choiceDiceNumberLabel: {fileID: 1837197235}
   curDiceObj: {fileID: 0}
-  dicePrefab: {fileID: 2132290445480070647, guid: f56315ddcd328fa46ac519a85157083d, type: 3}
+  dicePrefab: {fileID: 1300838738383112733, guid: f53e91f6c5e544846877fdaf444538d5, type: 3}
   curTubeObj: {fileID: 0}
   tubePrefab: {fileID: 4797202440666035503, guid: db8e270f4394a804fb56fabf7cf89486, type: 3}
   currentlySelectedDice: {fileID: 0}
