@@ -55,10 +55,6 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            NextLevel();
-        }
         if (gamePhase == GamePhase.ROUND_IN_PROGRESS && enemySpawner.enemiesSpawned == enemySpawner.noOfEnemies) {
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0) {
                 uiManager.youWonRound.SetActive(true);
@@ -90,7 +86,7 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
         noOfChoiceDice += 1;
         noOfPrecisionDice += 1;
-        noOfStandardDice += 1;
+        noOfStandardDice += 3;
     }
 
     public void StartGame() {
