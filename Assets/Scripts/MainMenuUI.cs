@@ -7,8 +7,10 @@ using UnityEngine.SceneManagement;
 public class MainMenuUI : MonoBehaviour
 {
     public GameController gameController;
+    public GameObject diceUi;
 
     void Start() {
+        diceUi.SetActive(false);
         gameController.ChangePhase(GamePhase.MENU);
     }
     // Start is called before the first frame update
@@ -17,7 +19,8 @@ public class MainMenuUI : MonoBehaviour
     }
 
     public void PlayGame() {
-        SceneManager.LoadScene("level1");
         gameController.ChangePhase(GamePhase.PICK_DICE);
+        diceUi.SetActive(true);
+        SceneManager.LoadScene("level1");
     }
 }

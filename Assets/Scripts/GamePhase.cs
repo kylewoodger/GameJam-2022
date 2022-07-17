@@ -12,6 +12,7 @@ public enum GamePhase
     DICE_IN_MOTION,
     DICE_LANDED,
     ROUND_IN_PROGRESS,
+    ROUND_ENDED,
     PICK_BONUS,
     GAME_OVER
 }
