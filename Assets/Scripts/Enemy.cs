@@ -10,41 +10,43 @@ public class Enemy : MonoBehaviour
     public float damage = 1.0f;
     public GameObject impactEffect;
 
-    public Transform[] target;
+    public  ArrayList target = new ArrayList();
     public float damping = 6.0f;
 
     public GameObject village; 
 
-    private int current;
+    private int current = 0;
 
 
     public void findPath()
     {
+        // Array.Clear(target, 0, target.Count);
         int i = 0;
         village = GameObject.FindGameObjectWithTag("Village");
-        Debug.Log(village);
         GameObject[] points = GameObject.FindGameObjectsWithTag("EnemyPath");
         int len = points.Length;
         foreach (GameObject point in points)
         {
             GameObject pos = (GameObject.Find("EnemyPathPosition (" + i + ")"));
-            target[i]= (pos.transform);
+            target.Add(pos.transform);
             i++;
+            // Debug.Log(target.Length);
             
         }
     }
    public void followPath()
     {
-        if (transform.position != target[current].position)
+        var targetPos = (Transform)target[current];
+        if (transform.position != targetPos.position)
         {
-            var rotation = Quaternion.LookRotation(target[current].position - transform.position);
+            var rotation = Quaternion.LookRotation(targetPos.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
-            Vector3 pos = Vector3.MoveTowards(transform.position, target[current].position, Speed * Time.deltaTime);
+            Vector3 pos = Vector3.MoveTowards(transform.position, targetPos.position, Speed * Time.deltaTime);
             GetComponent<Rigidbody>().MovePosition(pos);
         }
         else {
             current = (current + 1);
-            if (current == target.Length)
+            if (current == target.Count)
             {
                 village.GetComponent<Village>().villageHealth -= damage;
                 GameObject effectIns  = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);

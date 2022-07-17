@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8289523243141473098}
   - component: {fileID: 8289523243141473099}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: TowerLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,13 +78,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 3
-  bulletPrefab: {fileID: 2578502748166517966, guid: e68dd07bb9719dc41bc5c470f247925f, type: 3}
+  bulletPrefab: {fileID: 6999135733569982091, guid: d4b2d1c847a2b67449317b2f5a188562, type: 3}
   firePoint: {fileID: 244085170322710830}
-  turnSpeed: 5
+  turnSpeed: 20
   sightRange: 5
   target: {fileID: 0}
   bulletModifiers: {fileID: 0}
-  towerType: 0
+  towerType: 3
   enemyTag: Enemy
 --- !u!1001 &8289523243782052022
 PrefabInstance:
@@ -140,7 +140,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 87b1aec69ca38c64f94c9d678ad37beb, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 090664380902a944c952b5f0d13ee45e, type: 2}
+      objectReference: {fileID: 2100000, guid: 1373f3272266f2d4cb78e6eee8005f9d, type: 2}
     - target: {fileID: 919132149155446097, guid: 87b1aec69ca38c64f94c9d678ad37beb, type: 3}
       propertyPath: m_Name
       value: turret
